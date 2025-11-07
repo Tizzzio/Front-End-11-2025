@@ -8,17 +8,38 @@
   <body>
     <h1>Esempio di Form</h1>
     <form action="mailto:andryzito01@gmail.com">
-      <label for="nome">Il tuo nome</label>
-      <input type="text" required />
+      <fieldset>
+        <legend>Informazioni di contatto</legend>
+        <label for="nome">Il tuo nome</label>
+        <input type="text" placeholder="Inserisci nome e cognome" required />
+        <br />
+        <br />
+        <label for="email">La tua E-mail</label>
+        <input type="email" placeholder="Inserisci una mail valida" required />
+        <br />
+        <br />
+        <label for="eta" required>La tua età</label>
+        <input type="number" placeholder="Inserisci la tua età" required />
+        <br />
+        <br />
+        <label for="tel" required>Il tuo numero di telefono</label>
+        <input type="tel" placeholder="Inserisci il numero di telefono" required />
+      </fieldset>
       <br />
       <br />
-      <label for="email">La tua E-mail</label>
-      <input type="email" required />
-      <br />
-      <br />
-      <label for="message">Il tuo messaggio</label>
-      <textarea for="message" required></textarea>
-      <br />
+      <fieldset>
+        <legend>Scrivici</legend>
+        <label for="message">Il tuo messaggio</label>
+        <textarea for="message" placeholder="Scrivi il tuo messaggio qui" required></textarea>
+        <br />
+        <br />
+        <label for="date" required>La tua data di nascita</label>
+        <input type="date" required />
+        <br />
+        <br />
+        <label for="attachement">Allegato</label>
+        <input type="file" />
+      </fieldset>
       <br />
       <input type="submit" />
     </form>
