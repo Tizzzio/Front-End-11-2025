@@ -60,6 +60,7 @@ img {
 h2 {
   position: sticky;
   opacity: 0.5;
+  top: 0px;
 }
 
 .copy {
