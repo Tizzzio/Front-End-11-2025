@@ -1,0 +1,63 @@
+.Titolo {
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+  border: 5px solid blue;
+  margin-top: 10px;
+  position: relative;
+  top: 20px;
+  left: 700px;
+  background-color: rgb(240, 240, 98);
+}
+
+p {
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  border: 2px dashed green;
+  margin: 15px;
+  max-width: 400px;
+  max-height: 100px;
+  overflow: auto;
+  position: absolute;
+  left: 700px;
+  background-color: rgb(235, 109, 109);
+}
+
+li {
+  width: 200px;
+  height: 50px;
+  padding: 25px;
+  border: 3px solid red;
+  margin: 10px;
+  background-color: rgb(146, 218, 241);
+}
+
+.curiosità {
+  width: 250px;
+  height: 80px;
+  padding: 15px;
+  border: 4px dotted purple;
+  margin: 20px;
+  position: relative;
+  top: 10px;
+  left: 30px;
+}
+
+section {
+  font-weight: bold;
+  border: solid 1px black;
+  background-color: rgb(255, 255, 102);
+}
+
+img {
+  border: 2px solid black;
+  margin: 10px;
+  position: relative;
+  left: 600px;
+}
+
+h2 {
+  position: sticky;
+  opacity: 0.5;
+}
