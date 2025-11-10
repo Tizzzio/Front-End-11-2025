@@ -17,3 +17,10 @@ a {
 .Titoli {
   color: red;
 }
+
+img {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  opacity: 0.5;
+}
