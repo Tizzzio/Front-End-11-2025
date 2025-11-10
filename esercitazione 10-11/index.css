@@ -61,3 +61,22 @@ h2 {
   position: sticky;
   opacity: 0.5;
 }
+
+.copy {
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgb(90, 255, 117);
+}
+
+article {
+  padding: 20px;
+  margin: 15px;
+  position: fixed;
+  z-index: 1;
+  left: 1800px;
+  bottom: 850px;
+}
