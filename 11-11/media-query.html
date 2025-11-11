@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+    <style>
+      body {
+        color: purple;
+        background-color: lightyellow;
+      }
+      h1 {
+        font-size: 5em;
+      }
+      nav {
+        background-color: lightcoral;
+      }
+      @media (max-width: 600px) {
+        body {
+          background-color: lightblue;
+          font-size: 12px;
+        }
+        nav {
+          background-color: lightgreen;
+        }
+      }
+      @media (min-width: 601px) and (max-width: 768px) {
+        nav {
+          background-color: lightpink;
+        }
+      }
+      @media print {
+        body {
+          color: black;
+          background-color: white;
+        }
+        nav {
+          background-color: gray;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Titolo</h1>
+      <nav>
+        <a href="">item1</a>
+        <a href="">item2</a>
+        <a href="">item3</a>
+      </nav>
+    </header>
+  </body>
+  <footer></footer>
+</html>
