@@ -1,0 +1,21 @@
+:root {
+  --colore-primario: #4caf50;
+  --colore-secondario: #ff9800;
+  --colore-sfondo: #f0f0f0;
+  --colore-testo: #333333;
+  --testo-base: 18px;
+  --bg-color: black;
+  --text-color: white;
+}
+h1 {
+  color: var(--colore-primario);
+  font-size: var(--testo-base);
+}
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+body.dark {
+  background-color: #121212;
+  color: #ffffff;
+}
