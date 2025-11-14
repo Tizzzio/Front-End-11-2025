@@ -181,3 +181,11 @@ alert("Ciao, " + nomeUtente + "! Benvenuto!");
 let numeroUtente = Number(prompt("Inserisci un numero:"));
 let quadrato = numeroUtente ** 2;
 alert("Il quadrato di " + numeroUtente + " è " + quadrato + ".");
+
+/////Progetto Flash fatto in script.js separato
+
+//1. Fai inserire due numeri all’utente con `prompt()` e mostra la loro somma con `alert()`.
+//2. Crea un array di tre nomi e fai un ciclo che li saluta tutti.
+//3. Crea un oggetto `studente` e stampa in alert: `"Mario ha preso 28"`.
+//4. Scrivi una funzione che, data una parola, restituisce la parola in maiuscolo.
+//5. Stampa tutti i quadrati dei numeri da 1 a 10.
