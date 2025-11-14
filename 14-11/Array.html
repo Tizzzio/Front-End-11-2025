@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <h1>Array in JavaScript</h1>
+    <script>
+      // Creazione di un array
+      let frutti = ["Mela", "Banana", "Arancia"];
+      console.log("Array frutti:", frutti);
+
+      // Accesso agli elementi dell'array
+      console.log("Primo frutto:", frutti[0]);
+      console.log("Secondo frutto:", frutti[1]);
+
+      // Aggiunta di un elemento alla fine dell'array
+      frutti.push("Uva");
+      console.log("Dopo push:", frutti);
+
+      // Rimozione dell'ultimo elemento dell'array
+      let ultimoFrutto = frutti.pop();
+      console.log("Dopo pop:", frutti);
+      console.log("Frutto rimosso:", ultimoFrutto);
+
+      // Lunghezza dell'array
+      console.log("Lunghezza dell'array:", frutti.length);
+
+      // Iterazione sugli elementi dell'array
+      for (let i = 0; i < frutti.length; i++) {
+        console.log("Frutto all'indice", i + ":", frutti[i]);
+      }
+      console.table(frutti);
+    </script>
+  </body>
+</html>

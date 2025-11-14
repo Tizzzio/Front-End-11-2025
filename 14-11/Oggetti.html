@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oggetti</title>
+  </head>
+  <body>
+    <h1>Oggetti in JavaScript</h1>
+    <script>
+      // Creazione di un oggetto
+      let persona = {
+        nome: "Mario",
+        cognome: "Rossi",
+        età: 30,
+        saluta: function () {
+          console.log("Ciao, mi chiamo " + this.nome + " " + this.cognome);
+        },
+      };
+
+      console.log("Oggetto persona:", persona);
+
+      // Accesso alle proprietà dell'oggetto
+      console.log("Nome:", persona.nome);
+      console.log("Cognome:", persona["cognome"]);
+
+      // Chiamata di un metodo dell'oggetto
+      persona.saluta();
+
+      // Aggiunta di una nuova proprietà
+      persona.professione = "Sviluppatore";
+      console.log("Dopo aggiunta professione:", persona);
+
+      // Rimozione di una proprietà
+      delete persona.età;
+      console.log("Dopo rimozione età:", persona);
+
+      // Iterazione sulle proprietà dell'oggetto
+      for (let chiave in persona) {
+        console.log(chiave + ":", persona[chiave]);
+      }
+      console.log("separatore");
+      console.log("separatore");
+      console.log("separatore");
+      console.log("separatore");
+      console.log("separatore");
+      console.log("separatore");
+      console.log("separatore");
+      console.log("separatore");
+
+      let libro = {
+        titolo: "Il nome della rosa",
+        autore: "Umberto Eco",
+        annoPubblicazione: 1980,
+        genere: "Romanzo storico",
+      };
+      console.log(" Il titolo del libro è " + libro.titolo + " scritto da " + libro.autore);
+      console.log(" Anno di pubblicazione: " + libro.annoPubblicazione);
+      console.log(" Genere: " + libro.genere);
+
+      const auto = {
+        marca: "Toyota",
+        modello: "Corolla",
+        anno: 2020,
+        colore: "Blu",
+        descrizione: function () {
+          console.log("Auto: " + this.marca + " " + this.modello + ", Anno: " + this.anno + ", Colore: " + this.colore);
+        },
+      };
+      auto.descrizione();
+
+      const automobili = [
+        { marca: "Toyota", modello: "Corolla", anno: 2020, colore: "Blu" },
+        { marca: "Honda", modello: "Civic", anno: 2019, colore: "Rosso" },
+        { marca: "Ford", modello: "Focus", anno: 2018, colore: "Nero" },
+      ];
+
+      for (let i = 0; i < automobili.length; i++) {
+        let autoCorrente = automobili[i];
+        console.log(
+          "Auto " +
+            (i + 1) +
+            ": " +
+            autoCorrente.marca +
+            " " +
+            autoCorrente.modello +
+            ", Anno: " +
+            autoCorrente.anno +
+            ", Colore: " +
+            autoCorrente.colore
+        );
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lezione Javascript 1</title>
+  </head>
+  <body>
+    <h1>Prima Lezione JS</h1>
+    <script>
+      console.log("Ciao Mondo!");
+      console.info("Questa è una informazione.");
+      let x = 10;
+      console.log("il valore di x è " + x);
+      // tipi di dati
+      let isStudente = true;
+      let isFemale = false;
+      console.log("isStudente:", isStudente);
+      console.log("isFemale:", isFemale);
+      //operazioni aritmetiche
+
+      let somma = 10 + 5;
+      console.log("La somma è:", somma);
+      let sottrazione = 10 - 5;
+      console.log("La sottrazione è:", sottrazione);
+      let moltiplicazione = 10 * 5;
+      console.log("La moltiplicazione è:", moltiplicazione);
+      let resto = 10 % 3;
+      console.log("Il resto è:", resto);
+      let potenza = 2 ** 3;
+      console.log("La potenza è:", potenza);
+      // operatori di assegnamento
+      let y = 20;
+      y++;
+      console.log("y dopo incremento:", y);
+      y += 5;
+      console.log("y dopo y += 5:", y);
+      //operatori di confronto
+      console.log(10 == 10); // true
+      console.log(10 == "10"); // true perché confronta solo il valore
+      console.log(10 === "10"); // false perché tipi diversi
+      console.log(10 != 5); // true
+      console.log(10 !== "10"); // true perché tipi diversi
+      console.log(10 > 5); // true
+      console.log(10 < 5); // false
+      console.log(10 >= 10); // true
+    </script>
+  </body>
+</html>
