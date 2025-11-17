@@ -10,8 +10,10 @@ function creaUtente(nome, eta, professione = "non specificata") {
       categoriaProfessione = "Studente";
       break;
     case "developer":
-    case "sviluppatore":
       categoriaProfessione = "Developer";
+      break;
+    case "sviluppatore":
+      categoriaProfessione = "Sviluppatore";
       break;
     case "designer":
       categoriaProfessione = "Designer";
@@ -57,11 +59,8 @@ function aggiungiUtente() {
   //Switch
   let categoria;
   switch (true) {
-    case eta <= 0:
-      categoria = "Devi ancora nascere pollo!";
-      break;
     case eta < 10:
-      categoria = "Bambino";
+      categoria = "Ma che ci fai qua a " + eta + " anni?";
       break;
     case eta < 17:
       categoria = "Adolescente";
