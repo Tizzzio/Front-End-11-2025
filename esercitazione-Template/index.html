@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>template</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <h2>Template</h2>
+
+    <label>Nome:</label><br />
+    <input type="text" id="nome" /><br />
+
+    <label>Età:</label><br />
+    <input type="number" id="eta" /><br />
+
+    <label>Professione:</label><br />
+    <input type="text" id="professione" /><br />
+
+    <button onclick="aggiungiUtente()">Aggiungi Utente</button>
+    <button onclick="debugUtenti()">Debug Utenti</button>
+
+    <p id="messaggio" class="error"></p>
+
+    <h3>Lista Utenti</h3>
+    <div id="lista"></div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
