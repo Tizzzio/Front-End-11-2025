@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nodelist</title>
+  </head>
+  <body>
+    <form id="myForm">
+      <input type="text" name="username" value="Mario" />
+      <input type="password" name="password" value="1234" />
+      <input type="email" name="email" value="test@example.com" />
+    </form>
+    <script>
+      const form = document.getElementById("myForm");
+      console.log(form);
+      const campi = form.elements;
+      console.log(campi);
+      console.log(campi.username.value); // "Mario"
+      console.log(campi.password.value); // "1234"
+      console.log(campi.email.value); // "test@example.com"
+      form.innerHTML += '<input name="eta" value="30">';
+    </script>
+  </body>
+</html>
