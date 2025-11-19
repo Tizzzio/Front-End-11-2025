@@ -1,0 +1,105 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+ul {
+  padding-left: 0;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 200px;
+  margin-right: 10px;
+  border: 1px solid #000000;
+  border-radius: 100px;
+}
+
+li {
+  list-style: none;
+  padding: 6px 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  border: 1px solid black;
+  background-color: rgb(60, 201, 201);
+  font-weight: bold;
+}
+.info {
+  display: block;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid black;
+  background-color: #c5c5c5;
+}
+/* STEP 4 — attività completata */
+.completata {
+  text-decoration: line-through;
+  color: gray;
+}
+
+/* STEP 5 — evidenziazione */
+.evidenziata {
+  background-color: #da3131;
+}
+
+li button {
+  margin-left: 10px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+li button:hover {
+  background-color: #ddd;
+}
+
+li button:active {
+  transform: scale(0.95);
+}
+
+button {
+  font-size: 16px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: rgb(73, 73, 73);
+  color: white;
+}
+
+button:hover {
+  background-color: #6e6e6e;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#aggiungi::before {
+  content: "✅";
+}
+
+#svuota::before {
+  content: "☠️";
+}
+
+#messaggio {
+  font-style: italic;
+  color: #525252;
+  margin-bottom: 10px;
+}
+
+span {
+  font-size: 20px;
+  color: #000000;
+}
+span:hover {
+  color: rgb(83, 83, 83);
+}
+span:active {
+  transform: scale(0.95);
+}
