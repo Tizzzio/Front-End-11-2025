@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="userInput" type="text" placeholder="Inserisci il tuo nome" />
+    <button id="submitBtn" onclick="mostraTesto()">Invia</button>
+
+    <div id="output"></div>
+
+    <script>
+      function mostraTesto() {
+        const input = document.getElementById("userInput").value;
+        const outputDiv = document.getElementById("output");
+        // Utilizzo di textContent per prevenire XSS
+        outputDiv.innerHTML = sanificaHTML(input);
+        // outputDiv.textContent = input; // Alternativa sicura
+      }
+
+      function sanificaHTML(str) {
+        const div = document.createElement("div");
+        div.textContent = str;
+        return div.innerHTML;
+      }
+
+      // Esempio di utilizzo della funzione di sanificazione
+    </script>
+  </body>
+</html>

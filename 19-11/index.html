@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Esempio DOM</title>
+    <style>
+      .evidenziato {
+        background-color: yellow;
+      }
+      .nascosto {
+        display: none;
+      }
+
+      .attivo {
+        color: rgb(121, 150, 121);
+        font-size: larger;
+      }
+
+      .eliminami {
+        border: 2px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="titolo-principale">Benvenuto nel DOM</h1>
+      <img src="./img/cabinati.webp" width="64px" alt="Logo Eretico" />
+      <nav>
+        <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#servizi">Servizi</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="contenuto">
+        <h2>Introduzione</h2>
+        <p class="intro eliminami nascosto">Questo è un paragrafo introduttivo.</p>
+        <p class="descrizione">Descrizione dettagliata del contenuto.</p>
+
+        <div class="container">
+          <ul id="lista-elementi">
+            <li data-id="1">Primo elemento</li>
+            <li data-id="2"><span>Secondo elemento</span></li>
+            <li data-id="3">Terzo elemento</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 - Tutti i diritti riservati</p>
+    </footer>
+
+    <script>
+      const paragrafo = document.querySelector(".intro");
+      paragrafo.textContent = "Questo paragrafo è stato modificato tramite DOM!";
+
+      const elemento = document.createElement("div");
+      elemento.innerHTML = `
+    <p>Testo visibile</p>
+    <p style="display:none">Testo nascosto</p>
+`;
+      //   document.body.appendChild(elemento);
+
+      //   elemento.innerText += "Questo è un testo impostato con innerText.";
+      //   console.log("innerText:", elemento.innerText);
+      //   console.log("textContent:", elemento.textContent);
+
+      //   const container = document.querySelector(".container");
+      //   console.log("innerHTML:", container.innerHTML);
+      //   container.innerHTML += `
+      //     <h3>Nuovo titolo</h3>
+      //     <p>Paragrafo con <strong>testo in grassetto</strong></p>
+      //     <ul>
+      //         <li>Primo elemento</li>
+      //         <li>Secondo elemento</li>
+      //     </ul>`;
+
+      const lista = document.getElementById("lista-elementi");
+      //   lista.innerHTML += `<li data-id="4">Quarto elemento aggiunto dinamicamente</li>`;
+      lista.insertAdjacentHTML("beforebegin", "<h3>Elenco Dinamico</h3>");
+      lista.insertAdjacentHTML("afterend", "<p>Nuovo paragrafo dopo la lista</p>");
+      lista.insertAdjacentHTML("afterbegin", "<li data-id='0'>Elemento all'inizio</li>");
+      lista.insertAdjacentHTML("beforeend", "<li data-id='5'>Quinto elemento</li>");
+
+      function creaElementoLista(testo, id) {
+        return `
+       <li data-id="${id}" class="elemento-dinamico">
+            <span class="testo">${testo}</span>
+           
+        </li> `;
+      }
+      const nuovoElemento6 = creaElementoLista("Elemento creato con funzione", 6);
+      lista.insertAdjacentHTML("beforeend", nuovoElemento6);
+      const nuovoElemento7 = creaElementoLista("Altro elemento creato con funzione", 7);
+      lista.insertAdjacentHTML("beforeend", nuovoElemento7);
+
+      const link = document.querySelector("a");
+      link.href = "https://www.google.com";
+      link.target = "_blank";
+      link.title = "Vai a Google";
+      link.textContent = "Visita Google";
+      const image = document.querySelector("img");
+      image.alt = "Logo del Robot";
+      image.src = "./img/consoles.jpg";
+      image.loading = "lazy";
+      image.width = 128;
+
+      const elementoB = document.querySelector(".intro");
+
+      elementoB.style.backgroundColor = "yellow";
+      elementoB.style.fontSize = "18px";
+      elementoB.style.padding = "10px";
+      elementoB.style.border = "2px solid blue";
+
+      elementoB.style.cssText = " background-color: darkblue; padding: 15px;";
+      elementoB.classList.add("attivo");
+      elementoB.classList.remove("eliminami");
+      elementoB.classList.toggle("nascosto");
+
+      const nuovoParagrafo = document.createElement("p");
+      nuovoParagrafo.textContent = "Questo paragrafo è stato";
+      const section = document.querySelector("section");
+      //   section.appendChild(nuovoParagrafo);
+      //   section.append("Nuovo Testo con append", nuovoParagrafo);
+      //   section.prepend("Nuovo Testo con append", nuovoParagrafo);
+
+      const container = document.querySelector(".container");
+      const primoFiglio = container.firstElementChild;
+      container.insertBefore(nuovoParagrafo, primoFiglio);
+      //   const main = document.querySelector("main");
+      //   main.remove();
+      document.querySelector("main").remove();
+    </script>
+  </body>
+</html>

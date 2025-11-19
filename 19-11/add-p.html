@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aggiungi Paragrafi</title>
+  </head>
+  <body>
+    <div id="contenitore"></div>
+    <button id="aggiungi">Aggiungi paragrafo</button>
+    <script>
+      document.getElementById("aggiungi").addEventListener("click", function () {
+        const nuovoParagrafo = document.createElement("p");
+        nuovoParagrafo.textContent = "Questo è un nuovo paragrafo aggiunto dinamicamente.";
+        nuovoParagrafo.style.backgroundColor = "lightblue";
+        document.getElementById("contenitore").appendChild(nuovoParagrafo);
+      });
+    </script>
+  </body>
+</html>
