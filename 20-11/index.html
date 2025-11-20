@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const colori = ["rosso", "verde", "blu", "giallo", "viola"];
+      console.log(colori.indexOf("verde")); // Output: 1
+      console.log(colori.indexOf("rosa")); // Output: -1
+      console.log(colori.includes("giallo")); // Output: true
+      colori.splice(1, 2, "arancione", "indaco");
+      colori.splice(1, 0, "bianco", "nero");
+      console.log(colori); // Output: ["rosso", "giallo", "viola"]
+      // ['rosso', 'bianco', 'nero', 'arancione', 'indaco', 'giallo', 'viola']
+      let parte = colori.slice(2, 5);
+      console.log(parte); // Output: ['nero', 'arancione', 'indaco']
+      console.log(colori); // Original array remains unchanged
+    </script>
+  </body>
+</html>
