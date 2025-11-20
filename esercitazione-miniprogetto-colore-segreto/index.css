@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(202, 255, 255);
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s, opacity 0.2s;
+  border: #000000 2px solid;
+  box-shadow: 6px 10px 6px rgba(0, 0, 0, 0.2);
+}
+
+.square:hover {
+  transform: scale(1.1);
+}
+
+.square.inactive {
+  opacity: 0.3;
+  cursor: default;
+}
+
+#messaggio {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#reset {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+}
+#reset:hover {
+  background-color: #ffe54f;
+}
