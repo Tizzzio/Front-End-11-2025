@@ -38,6 +38,7 @@ const tuttiProdotti = [
 ];
 let carrello = [];
 let categoriaAttiva = "tutte";
+let testoRicerca = "";
 
 function filtraCategoria(categoria) {
   categoriaAttiva = categoria;
@@ -49,6 +50,11 @@ function filtraCategoria(categoria) {
     event.target.classList.add("attivo");
   }
 
+  mostraProdotti();
+}
+
+function ricercaProdotti() {
+  testoRicerca = document.getElementById("barra-ricerca").value.toLowerCase();
   mostraProdotti();
 }
 
@@ -78,7 +84,11 @@ function mostraProdotti() {
   }
 
   //FILTER
-  const prodottiFiltrati = categoriaAttiva === "tutte" ? tuttiProdotti : tuttiProdotti.filter((p) => p.categoria === categoriaAttiva);
+  let prodottiFiltrati = categoriaAttiva === "tutte" ? tuttiProdotti : tuttiProdotti.filter((p) => p.categoria === categoriaAttiva);
+
+  if (testoRicerca.trim() !== "") {
+    prodottiFiltrati = prodottiFiltrati.filter((p) => p.nome.toLowerCase().includes(testoRicerca));
+  }
 
   prodottiFiltrati.forEach((prodotto) => {
     const divProdotto = document.createElement("div");
