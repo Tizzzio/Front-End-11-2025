@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>🛒 Negozio</h1>
+      <div class="filtri">
+        <button onclick="filtraCategoria('tutte')" class="attivo">Tutte</button>
+        <button onclick="filtraCategoria('tech')">Tech</button>
+        <button onclick="filtraCategoria('cultura')">Cultura</button>
+        <button onclick="filtraCategoria('ufficio')">Ufficio</button>
+        <button onclick="filtraCategoria('accessori')">Accessori</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="prodotti-sezione">
+        <h2>Prodotti in Vendita</h2>
+        <div id="prodotti-container"></div>
+      </section>
+
+      <section id="carrello-sezione">
+        <h2>Il tuo Carrello 🛍️</h2>
+        <div id="carrello-contenuto">
+          <p class="carrello-vuoto">Il carrello è vuoto</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
