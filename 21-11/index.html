@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map - Filter - ForEach - Reduce</title>
+  </head>
+  <body>
+    <script>
+      const numeri = [1, 2, 3, 4, 5];
+      const raddoppia = numeri.map((n) => n * 2);
+      console.table(raddoppia);
+
+      const nomi = ["mario", "luigi", "peach", "bowser"];
+      const nomiMaiuscoli = nomi.map((nome) => nome.toUpperCase());
+      console.table(nomiMaiuscoli);
+
+      const prodotti = [
+        { nome: "Laptop", prezzo: 800 },
+        { nome: "Smartphone", prezzo: 600 },
+        { nome: "Mouse", prezzo: 25 },
+        { nome: "Tastiera", prezzo: 60 },
+      ];
+
+      const prodottiIva = prodotti.map((prodotto) => {
+        return {
+          // nome: prodotto.nome,
+          // prezzo: prodotto.prezzo,
+          ...prodotto,
+          prezzoConIva: prodotto.prezzo * 1.22,
+          categoria: "Elettronica",
+        };
+      });
+
+      console.table(prodottiIva);
+
+      const lettere = ["a", "b", "c"];
+      const lettereConIndice = lettere.map((item, index) => `${index + 1} - ${item}`);
+      console.table(lettereConIndice);
+
+      const persone = [
+        { nome: "Mario", eta: 25, professione: "Idraulico", role: "admin" },
+        { nome: "Luigi", eta: 30 },
+        { nome: "Peach", eta: 22 },
+        { nome: "Bowser", eta: 35 },
+      ];
+      // Con Destructuring
+      const salutaPersone = persone.map(({ nome, eta }) => `Ciao ${nome}, hai ${eta} anni!`);
+      console.table(salutaPersone);
+      console.log(salutaPersone[0]);
+      // Senza Destructuring
+      const salutaPersone2 = persone.map((item) => `Ciao ${item.nome}, hai ${item.eta} anni!`);
+      console.table(salutaPersone2);
+
+      const frutta = ["mela", "banana", "arancia"];
+      const fruttaLista = frutta.map((item) => `<li>${item}</li>`);
+      console.table(fruttaLista);
+
+      //Filter
+      const numeriMisti = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      const numeriDispari = numeriMisti.filter((n) => n % 2 !== 0);
+      console.table(numeriDispari);
+      console.table(numeriMisti); // L'array originale rimane invariato
+      const nomiVari = ["Ana", "Alessandro", "Bo", "Francesca", "Giuseppe"];
+      const nomiLunghi = nomiVari.filter((nome) => nome.length > 3);
+      console.table(nomiLunghi);
+
+      const tuttiProdotti = [
+        { nome: "Laptop", prezzo: 800, categoria: "tech" },
+        { nome: "Mouse", prezzo: 25, categoria: "tech" },
+        { nome: "Libro", prezzo: 15, categoria: "cultura" },
+        { nome: "Tastiera", prezzo: 60, categoria: "tech" },
+        { nome: "Penna", prezzo: 3, categoria: "ufficio" },
+      ];
+
+      const prodottiEconomici = tuttiProdotti.filter(({ prezzo }) => prezzo < 50);
+      console.table(prodottiEconomici);
+
+      const prodottiTech = tuttiProdotti.filter((item) => item.categoria === "tech");
+      console.table(prodottiTech);
+
+      const studenti = [
+        { nome: "Mario", voto: 8, presente: true },
+        { nome: "Luigi", voto: 6, presente: false },
+        { nome: "Peach", voto: 9, presente: true },
+        { nome: "Bowser", voto: 4, presente: true },
+      ];
+
+      const studentiPromossi = studenti.filter((item) => item.voto >= 6 && item.presente);
+      console.table(studentiPromossi);
+
+      //    const tuttiProdotti = [
+      //   { nome: "Laptop", prezzo: 800, categoria: "tech" },
+      //   { nome: "Mouse", prezzo: 25, categoria: "tech" },
+      //   { nome: "Libro", prezzo: 15, categoria: "cultura" },
+      //   { nome: "Tastiera", prezzo: 60, categoria: "tech" },
+      //   { nome: "Penna", prezzo: 3, categoria: "ufficio" },
+      // ];
+
+      const prezziScontati = tuttiProdotti
+        .filter(({ prezzo }) => prezzo > 20)
+        .map((item) => ({
+          ...item,
+          prezzoScontato: item.prezzo * 0.8,
+        }));
+
+      console.table(prezziScontati);
+
+      const ricerca = "EL";
+      const fruttiTrovati = ["Mela", "banana", "arancia", "Pera", "uva"].filter((frutto) => frutto.toLowerCase().includes(ricerca.toLowerCase()));
+      console.table(fruttiTrovati);
+
+      // Data e Ora
+      const ms = Date.now();
+      console.log(ms);
+      const adesso = new Date();
+      console.log(adesso);
+      console.log(adesso.toLocaleTimeString());
+      console.log(adesso.toLocaleDateString());
+      console.log(adesso.toLocaleString());
+      console.log(adesso.getFullYear());
+      console.log(adesso.getMonth() + 1);
+      console.log(adesso.getDate());
+      console.log(adesso.getHours());
+
+      // Reduce
+
+      items = [
+        { name: "apple", price: 1.2, quantity: 4 },
+        { name: "banana", price: 0.8, quantity: 6 },
+        { name: "orange", price: 1.5, quantity: 3 },
+      ];
+      const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+      console.log(`Total cost: $${total.toFixed(2)}`);
+      // 3. Per CONCATENARE STRINGHE: valore iniziale = ""
+      const parole = ["Ciao", "mondo", "React"];
+      const frase = parole.reduce((acc, parola) => acc + " " + parola, "").trim();
+      // '' + ' Ciao' + ' mondo' + ' React' = ' Ciao mondo React'
+      console.log(frase);
+      // console.log(frase.trim());
+      const voti = [85, 92, 78, 96, 88];
+      const votoMassimo = voti.reduce((max, voto) => (voto > max ? voto : max), 0);
+      console.log(`Voto massimo: ${votoMassimo}`);
+    </script>
+  </body>
+</html>
