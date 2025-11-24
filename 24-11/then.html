@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch with Then</title>
+  </head>
+  <body>
+    <h1>Fetch API Example with .then()</h1>
+    <script>
+      const API_BASE_URL = "https://jsonplaceholder.typicode.com";
+      function apiCall(method, endpoint, body = null) {
+        console.log("API Call", `Chiamando: ${API_BASE_URL}${endpoint}`);
+        return fetch(`${API_BASE_URL}${endpoint}`, {
+          method: method,
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: body ? JSON.stringify(body) : null,
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+            }
+            return response.json();
+          })
+          .then((data) => {
+            console.log("API Success", `Dati ricevuti da ${endpoint}`);
+            return data;
+          })
+          .catch((error) => {
+            console.log("API Error", `Errore per ${endpoint}: ${error.message}`);
+            return null;
+          });
+      }
+      console.log("TEST UTILITY FUNCTION", "Usiamo la funzione riutilizzabile");
+
+      function fetchUser(userId = 1) {
+        apiCall("GET", `/users/${userId}`).then((user) => {
+          if (user) {
+            console.log("Dati User ricevuti", `Nome: ${user.name}, Email: ${user.email}, City: ${user.address.city}`);
+          } else {
+            console.log("Nessun dato utente ricevuto");
+          }
+        });
+      }
+      fetchUser(9);
+
+      const newPost = {
+        title: "foo",
+        body: "bar",
+        userId: 1,
+      };
+
+      function createPost(newPost) {
+        apiCall("POST", "/posts", newPost).then((post) => {
+          if (post) {
+            console.log("Post creato", `Titolo: ${post.title}, ID: ${post.id}`);
+          } else {
+            console.log("Creazione del post fallita");
+          }
+        });
+      }
+
+      createPost(newPost);
+
+      function deletePost(postId) {
+        apiCall("DELETE", `/posts/${postId}`).then((response) => {
+          if (response !== null) {
+            console.log("DELETE riuscito", `Post ${postId} eliminato con successo`);
+          } else {
+            console.log("DELETE fallito", `Errore nell'eliminazione del post ${postId}`);
+          }
+        });
+      }
+
+      deletePost(5);
+    </script>
+  </body>
+</html>
