@@ -31,7 +31,7 @@ export default function App() {
       <div className="header">
         <div>
           <h1 style={{ margin: 0 }}>ToDo List con React</h1>
-          <p style={{ margin: "6px 0 0", color: "var(--muted)" }}>React + Vite • useState only • Tema: {theme}</p>
+          <p style={{ margin: "6px 0 0", color: "var(--muted)" }}>Tema: {theme}</p>
         </div>
         <div className="controls">
           <Button variant="ghost" onClick={() => setTheme((t) => (t === "light" ? "dark" : "light"))}>

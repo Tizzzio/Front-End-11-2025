@@ -36,7 +36,7 @@ export default function TodoList({ tasks, onDelete, onToggle, onUpdate }) {
       </div>
       <div className="todo-list">
         {filtered.length === 0 ? (
-          <div className="empty">Nessun task qui. Aggiungine uno!</div>
+          <div className="empty">Nessun task al momento.</div>
         ) : (
           filtered.map((task) => <TodoItem key={task.id} task={task} onDelete={onDelete} onToggle={onToggle} onUpdate={onUpdate} />)
         )}

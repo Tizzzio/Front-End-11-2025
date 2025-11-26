@@ -17,7 +17,7 @@ export default function TodoForm({ onAdd }) {
       <Input
         value={value}
         onChange={setValue}
-        placeholder={"Aggiungi nuovo task..."}
+        placeholder={"Aggiungi task..."}
         onKeyDown={(e) => {
           if (e.key === "Enter") submit(e);
         }}
