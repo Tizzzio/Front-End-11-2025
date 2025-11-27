@@ -1,0 +1,40 @@
+.category {
+  border: solid 2px black;
+  padding: 5px 10px;
+  border-radius: 15px;
+  width: 30%;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  line-height: 35px;
+  border: 2px solid black;
+  border-radius: 100px;
+}
+
+.elettronica {
+  background-color: yellow;
+}
+.telefonia {
+  background-color: lightblue;
+}
+.audio {
+  background-color: green;
+  color: white;
+}
+.ufficio {
+  background-color: grey;
+  color: white;
+}
+
+.wearable {
+  background-color: lightseagreen;
+}
+
+.periferiche {
+  background-color: cyan;
+}
