@@ -29,10 +29,10 @@ export default function Dashboard() {
       {usersList.length === 0 && (
         <div className="login-container">
           <button onClick={loginFree} className="btn">
-            Login Utente
+            👌Login Utente
           </button>
           <button onClick={loginVip} className="btn premium">
-            Login VIP
+            🤯 Login VIP
           </button>
         </div>
       )}
