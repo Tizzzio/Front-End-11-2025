@@ -1,0 +1,79 @@
+.dashboard {
+  min-height: 100vh;
+  padding: 40px;
+  transition: 0.3s;
+  font-family: sans-serif;
+}
+
+.dashboard.light {
+  background: rgb(213, 248, 244);
+  color: #111;
+}
+.dashboard.dark {
+  background: #111;
+  color: white;
+}
+
+.theme-btn {
+  padding: 10px 16px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border: 2px solid currentColor;
+  font-size: 15px;
+  border-radius: 6px;
+}
+
+.login-container {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+.btn:hover {
+  opacity: 0.85;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+.premium {
+  background: #ca8aff;
+}
+
+.user-box {
+  margin-top: 25px;
+  font-size: 17px;
+}
+
+.notifications {
+  margin-top: 18px;
+}
+.btn.small {
+  padding: 6px 10px;
+  margin-left: 10px;
+}
+
+.premium-area {
+  margin-top: 20px;
+  padding: 15px;
+  border: 2px solid currentColor;
+  border-radius: 8px;
+}
+
+.logout {
+  margin-top: 25px;
+  background: red;
+}
+
+.logout:hover {
+  background: #c20000;
+}
