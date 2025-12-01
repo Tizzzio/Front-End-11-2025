@@ -1,0 +1,41 @@
+.field {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.required {
+  color: #d60000;
+  margin-left: 2px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0066ff;
+  box-shadow: 0 0 0 2px rgba(0, 102, 255, 0.2);
+}
+
+input[aria-invalid="true"] {
+  border-color: #d60000;
+}
+
+.error {
+  color: #d60000;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
