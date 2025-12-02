@@ -1,9 +1,11 @@
 import "./App.css";
 import { games } from "./mock/mock.js";
+import Header from "./components/Header/Header.jsx";
 
 function App() {
   return (
     <div>
+      <Header totalGames={games.length} onSearch={(searchTerm) => console.log("Ricerca:", searchTerm)} />
       <h1>🎮 I miei giochi</h1>
       <p>Totale giochi: {games.length}</p>
 
