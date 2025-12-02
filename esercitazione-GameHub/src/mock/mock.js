@@ -11,7 +11,7 @@ export const games = [
     status: "completato",
     hoursPlayed: 150,
     difficulty: "Medio",
-    coverUrl: "https://picsum.photos/300/400?random=1",
+    coverUrl: "https://image.api.playstation.com/vulcan/ap/rnd/202211/0711/kh4MUIuMmHlktOHar3lVl6rY.png",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ export const games = [
     status: "in-corso",
     hoursPlayed: 60,
     difficulty: "Difficile",
-    coverUrl: "https://picsum.photos/300/400?random=2",
+    coverUrl: "https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg",
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ export const games = [
     status: "abbandonato",
     hoursPlayed: 20,
     difficulty: "Facile",
-    coverUrl: "https://picsum.photos/300/400?random=3",
+    coverUrl: "https://image.api.playstation.com/vulcan/ap/rnd/202408/0817/4248a0d1a669210e5caf5174eda176c7883be2c9089fa106.png",
   },
   {
     id: 4,
@@ -50,7 +50,7 @@ export const games = [
     status: "completato",
     hoursPlayed: 50,
     difficulty: "Medio",
-    coverUrl: "https://picsum.photos/300/400?random=4",
+    coverUrl: "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_SuperMarioOdyssey_image1600w.jpg",
   },
   {
     id: 5,
@@ -63,7 +63,8 @@ export const games = [
     status: "completato",
     hoursPlayed: 120,
     difficulty: "Difficile",
-    coverUrl: "https://picsum.photos/300/400?random=5",
+    coverUrl:
+      "https://assets.nintendo.eu/image/upload/f_auto,c_limit,w_992,q_auto:low/MNS/NOE/70010000000023/SQ_NSwitch_TheLegendOfZeldaBreathOfTheWild_E",
   },
   {
     id: 6,
@@ -76,7 +77,7 @@ export const games = [
     status: "in-corso",
     hoursPlayed: 200,
     difficulty: "Medio",
-    coverUrl: "https://picsum.photos/300/400?random=6",
+    coverUrl: "https://assets-prd.ignimgs.com/2021/12/14/minecraft-1639513933156.jpg?crop=1%3A1%2Csmart&format=jpg&auto=webp&quality=80",
   },
   {
     id: 7,
@@ -89,7 +90,7 @@ export const games = [
     status: "wishlist",
     hoursPlayed: 0,
     difficulty: "Medio",
-    coverUrl: "https://picsum.photos/300/400?random=7",
+    coverUrl: "https://m.media-amazon.com/images/M/MV5BMTZlMmIxM2EtN2Y4Zi00M2ZhLTk3NzgtNjJmZTU0MTQ3YjcwXkEyXkFqcGc@._V1_.jpg",
   },
   {
     id: 8,
@@ -102,7 +103,7 @@ export const games = [
     status: "completato",
     hoursPlayed: 75,
     difficulty: "Medio",
-    coverUrl: "https://picsum.photos/300/400?random=8",
+    coverUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Rocket_League_coverart.jpg",
   },
   {
     id: 9,
@@ -115,6 +116,6 @@ export const games = [
     status: "wishlist",
     hoursPlayed: 0,
     difficulty: "Difficile",
-    coverUrl: "https://picsum.photos/300/400?random=9",
+    coverUrl: "https://cdn1.epicgames.com/spt-assets/5dcd88f4e2094a698ebffa43438edc33/apex-legends-1mf51.jpg",
   },
 ];
