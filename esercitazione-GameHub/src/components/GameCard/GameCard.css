@@ -1,12 +1,14 @@
 .game-card {
-  border: 1px solid #ccc;
+  border: 2px solid #000000;
   padding: 15px;
+  margin: 10px;
   border-radius: 8px;
   display: flex;
   gap: 15px;
-  background: rgb(255, 255, 255);
+  background: rgb(196, 196, 196);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .game-card:hover {
   transform: translateY(-2px);
