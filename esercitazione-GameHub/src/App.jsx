@@ -1,40 +1,52 @@
 import "./App.css";
 import { games } from "./mock/mock.js";
+import { useState, useMemo } from "react";
 import Header from "./components/Header/Header.jsx";
+import Navigation from "./components/Navigations/Navigations.jsx";
+import GameList from "./components/GameList/GameList.jsx";
 
 function App() {
-  return (
-    <div>
-      <Header totalGames={games.length} onSearch={(searchTerm) => console.log("Ricerca:", searchTerm)} />
-      <h1>🎮 I miei giochi</h1>
-      <p>Totale giochi: {games.length}</p>
+  const [activeTab, setActiveTab] = useState("tutti");
+  const [searchTerm, setSearchTerm] = useState("");
 
-      <div style={{ display: "grid", gap: "20px", marginTop: "20px" }}>
-        {games.map((game) => (
-          <div key={game.id} style={{ border: "1px solid #ccc", padding: "15px", borderRadius: "8px" }}>
-            <h3>{game.title}</h3>
-            <p>
-              <strong>Genere:</strong> {game.genre}
-            </p>
-            <p>
-              <strong>Piattaforma:</strong> {game.platform}
-            </p>
-            <p>
-              <strong>Anno:</strong> {game.year}
-            </p>
-            <p>
-              <strong>Voto:</strong> ⭐ {game.rating}/10
-            </p>
-            <p>
-              <strong>Status:</strong> {game.status}
-            </p>
-            <p>
-              <strong>Ore giocate:</strong> {game.hoursPlayed}h
-            </p>
-            <img src={game.coverUrl} alt={game.title} style={{ width: "100px", height: "133px", objectFit: "cover" }} />
-          </div>
-        ))}
-      </div>
+  // Filtra i giochi in base al tab attivo e al termine di ricerca
+  const filteredGames = useMemo(() => {
+    let filtered = games;
+
+    // Filtro per tab
+    if (activeTab !== "tutti") {
+      filtered = filtered.filter((game) => game.status === activeTab);
+    }
+
+    // Filtro per ricerca
+    if (searchTerm) {
+      filtered = filtered.filter(
+        (game) => game.title.toLowerCase().includes(searchTerm.toLowerCase()) || game.genre.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+
+    return filtered;
+  }, [activeTab, searchTerm]);
+
+  // Titoli dinamici per i tab
+  const getTitle = () => {
+    const tabLabels = {
+      tutti: "Tutti i giochi",
+      completato: "Giochi completati",
+      "in-corso": "Giochi in corso",
+      wishlist: "Wishlist",
+      abbandonato: "Giochi abbandonati",
+    };
+    return tabLabels[activeTab] || "I miei giochi";
+  };
+
+  return (
+    <div className="app">
+      <Header totalGames={games.length} onSearch={setSearchTerm} />
+      <Navigation activeTab={activeTab} setActiveTab={setActiveTab} />
+      <main className="main-content">
+        <GameList games={filteredGames} title={getTitle()} />
+      </main>
     </div>
   );
 }

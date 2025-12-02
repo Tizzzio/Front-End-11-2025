@@ -1,0 +1,19 @@
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background: #1a1a1a;
+  padding: 15px;
+}
+.nav-btn {
+  background: #222;
+  border: 1px solid #00ff88;
+  color: #00ff88;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.nav-btn.active {
+  background: #00ff88;
+  color: #111;
+}
